@@ -1,0 +1,108 @@
+$color-gray: #696F72;
+$color-gray-light: #A1A1A1;
+$color-gray-darck: #5B5B5B;
+$color-primary: #20A6FF;
+$color-white: #FFFFFF;
+
+.form-content{
+    margin-top: 150px;
+    .form-content-title{
+        color: $color-gray;
+        font-size: 16px;
+        font-family: Lato;
+        font-weight: 400;
+        margin-bottom: 24px;
+        span{
+            font-weight: 700;
+        }
+    }
+    .content-control{
+        width: 310px;
+        margin: auto;
+    }
+    .form-input{
+        margin-bottom: 26px;
+    }
+    .form-input input::placeholder{
+        color:$color-gray-light;
+        font-family: Lato;
+        font-weight: 400;
+        font-size: 14px;
+    }
+    .content-checkbox{
+        width: 360px;
+        margin: auto;
+        .form-check{
+            margin-bottom: 10px;
+        }
+        .form-check-label{
+            margin-left: 8px;
+            padding-top: 3px;
+        }
+    }
+    .form-control{
+        border: 1px solid $color-gray-light;
+        height:46px;
+        color: $color-gray;
+        font-family: Lato;
+        font-weight: 400;
+        font-size: 14px;
+    }
+    .form-select{
+        border: 1px solid $color-gray-light;
+        height:46px;
+    }
+    .form-control.is-invalid{
+        border-color: #dc3545;
+    }
+    .form-select{
+        color:$color-gray-light;
+        font-family: Lato;
+        font-weight: 400;
+        font-size: 14px;
+    }
+    .form-select{
+        background-image: url(../../../assets/img/icons_chevron-right.png);
+        background-size: initial;
+    }
+    .form-check-input{
+        height: 20px;
+        width: 20px;
+    }
+    .form-check-input:checked {
+        background-color: #20A6FF;
+        border-color: #20A6FF;
+    }
+    .form-check {
+        label{
+            font-family: Roboto;
+            font-weight: 400;
+            font-size: 12px;
+            color: $color-gray-darck;
+            a{
+                color: $color-primary;
+                cursor: pointer;
+            }
+        }
+    }
+    .content-buttton{
+        margin: auto;
+        text-align: center;
+        margin-top: 70px;
+
+        button{
+            width: 320px;
+            height: 56px;
+            border-radius: 50px;
+            font-family: Roboto;
+            font-weight: 500;
+            font-size:  16px;
+            color: $color-white;
+            background: linear-gradient(90deg, #AD96DC 2.83%, #20A6FF 100%);
+
+        }
+
+    }
+
+
+}

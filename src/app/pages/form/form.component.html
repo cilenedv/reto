@@ -1,0 +1,106 @@
+<div class="form-content">
+    <div>
+
+        <form autocomplete="off" [formGroup]="formulario" (ngSubmit)="start()">
+            <div class="content-control">
+                <p class="form-content-title">
+                    Descubre lo que tenemos pensado <span>Para Ti</span>
+                </p>
+                <div class="row form-group form-input">
+                    <div class="col-6">
+                        <select
+                            class="form-select"
+                            aria-label="Default select example"
+                            formControlName="tipodocumento"
+                        >
+                            <option value="1" selected>DNI</option>
+                            <option value="2">Carnet de extranjeria</option>
+                        </select>
+                    </div>
+                    <div class="col-6">
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Número"
+                            formControlName="numerodocumento"
+                            [class.is-invalid]="documentoNoValido"
+                        />
+                        <small
+                            *ngIf="documentoNoValido"
+                            class="form-text text-danger"
+                        >
+                            Ingrese el número de su documento
+                        </small>
+                    </div>
+                </div>
+                <div class="row form-group form-input">
+                    <div>
+                        <input
+                            class="form-control"
+                            type="email"
+                            placeholder="Correo electrónico"
+                            formControlName="correo"
+                            [class.is-invalid]="correoNoValido"
+                        />
+                        <small *ngIf="correoNoValido" class="form-text text-danger">
+                            Ingrese un correo valido
+                        </small>
+                    </div>
+                </div>
+                <div class="row form-group form-input">
+                    <div>
+                        <input
+                            type=""
+                            class="form-control"
+                            placeholder="Número de celular"
+                            formControlName="phone"
+                            [class.is-invalid]="phoneNoValido"
+                        />
+                        <small *ngIf="phoneNoValido" class="form-text text-danger">
+                            Ingrese un número valido
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <div class="content-checkbox">
+                <div class="form-check">
+                    <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefaultFirst"
+                        formControlName="conditionFirst"
+                    />
+                    <label class="form-check-label" for="flexCheckDefaultFirst">
+                        He leído y acepto los términos y condiciones. <a>Ver aquí</a>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefaultSecond"
+                        formControlName="conditionSecond"
+                    />
+                    <label class="form-check-label" for="flexCheckDefaultSecond">
+                        He leído y acepto el uso del tratamiento de mis datos
+                        personales. <a>Ver aquí</a>
+                    </label>
+                </div>
+            </div>
+            <div class="content-buttton form-group row">
+                <label class="col-2 col-form-label">&nbsp;</label>
+                <div class="col-md-8">
+                    <button
+                        type="submit"
+                        class="btn btn-block"
+                        [disabled]="!formulario.valid"
+                    >
+                    Comencemos
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

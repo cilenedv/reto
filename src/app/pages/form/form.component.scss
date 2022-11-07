@@ -3,6 +3,7 @@ $color-gray-light: #A1A1A1;
 $color-gray-darck: #5B5B5B;
 $color-primary: #20A6FF;
 $color-white: #FFFFFF;
+$color-blue-darck: #162C56;
 
 .form-content{
     margin-top: 150px;
@@ -12,7 +13,7 @@ $color-white: #FFFFFF;
     .form-content-title{
         color: $color-gray;
         font-size: 16px;
-        font-family: Lato;
+        font-family: LatoWeb, Arial;
         font-weight: 400;
         margin-bottom: 24px;
         span{
@@ -22,19 +23,26 @@ $color-white: #FFFFFF;
     .content-control{
         width: 310px;
         margin: auto;
+        @media (max-width: 576px){
+            max-width:250px;
+        }
+
     }
     .form-input{
         margin-bottom: 26px;
     }
     .form-input input::placeholder{
         color:$color-gray-light;
-        font-family: Lato;
+        font-family: LatoWeb, Arial;
         font-weight: 400;
         font-size: 14px;
     }
     .content-checkbox{
         width: 360px;
         margin: auto;
+        @media (max-width: 767px){
+            max-width: 250px;
+        }
         .form-check{
             margin-bottom: 10px;
         }
@@ -47,7 +55,7 @@ $color-white: #FFFFFF;
         border: 1px solid $color-gray-light;
         height:46px;
         color: $color-gray;
-        font-family: Lato;
+        font-family: LatoWeb, Arial;
         font-weight: 400;
         font-size: 14px;
     }
@@ -60,7 +68,7 @@ $color-white: #FFFFFF;
     }
     .form-select{
         color:$color-gray-light;
-        font-family: Lato;
+        font-family: LatoWeb, Arial;
         font-weight: 400;
         font-size: 14px;
     }
@@ -107,6 +115,10 @@ $color-white: #FFFFFF;
             font-size:  16px;
             color: $color-white;
             background: linear-gradient(90deg, #AD96DC 2.83%, #20A6FF 100%);
+            @media (max-width: 576px){
+                width: 250px;
+            }
+
 
         }
 
@@ -116,7 +128,7 @@ $color-white: #FFFFFF;
         margin: auto;
         margin-bottom: 40px;
         button{
-            font-family: Lato;
+            font-family: LatoWeb, Arial;
             font-weight: 600;
             font-size: 16px;
             color: $color-primary;
@@ -155,6 +167,73 @@ $color-white: #FFFFFF;
     }
 
 }
+.carousel-item {
+    img{
+        margin: auto;
+        @media (max-width: 576px){
+            width: 100%;
+            height:  auto;
+        }
+    }
+}
+.carousel-control-next-icon{
+    background-image: url(../../../assets/img/icon_next.png);
+    background-size: initial;
+}
+.carousel-control-prev-icon{
+    background-image: url(../../../assets/img/icon_previus.png);
+    background-size: initial;
+}
+.btn-close{
+    background-image: url(../../../assets/img/icon_close.png);
+    background-size: initial;
+    opacity: 1;
+}
+.modal-header{
+    border-bottom: none;
+}
+.content-footer{
+    text-align: center;
+    .title{
+        font-size: 38px;
+        font-weight: bold;
+        font-family: Lato;
+        color:$color-primary;
+        line-height: 1;
+        margin-bottom: 26px;
+        margin-top: 26px;
+    }
+    .sub-title{
+        font-size: 18px;
+        font-weight: bold;
+        font-family: Lato;
+        color: $color-blue-darck;
+    }
+    .content-buttton{
+        margin: auto;
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 10px;
+
+        button{
+            width: 320px;
+            height: 56px;
+            border-radius: 50px;
+            font-family: Roboto;
+            font-weight: 500;
+            font-size:  16px;
+            color: $color-white;
+            background: linear-gradient(90deg, #AD96DC 2.83%, #20A6FF 100%);
+            border: none !important;
+            @media (max-width: 576px){
+                width: 250px;
+            }
+
+        }
+
+    }
+}
+
 
 
 

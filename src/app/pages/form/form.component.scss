@@ -23,7 +23,7 @@ $color-blue-darck: #162C56;
     .content-control{
         width: 310px;
         margin: auto;
-        @media (max-width: 576px){
+        @media (max-width: 375px){
             max-width:250px;
         }
 
@@ -102,7 +102,7 @@ $color-blue-darck: #162C56;
         margin-top: 70px;
         margin-bottom: 40px;
         @media (max-width: 767px){
-            margin-top: 20px;
+            margin-top: 30px;
             margin-bottom: 60px;
         }
 
@@ -167,11 +167,25 @@ $color-blue-darck: #162C56;
     }
 
 }
+.modal-body  {
+    .carousel{
+        width: 80%;
+        margin: auto;
+        @media (max-width: 768px){
+            width: 100%;
+        }
+    }
+}
+.carrusel-inner{
+    width: 46%;
+    margin: auto;
+}
 .carousel-item {
+    background-color: $color-white;
     img{
         margin: auto;
         @media (max-width: 576px){
-            width: 100%;
+            width: 76%;
             height:  auto;
         }
     }

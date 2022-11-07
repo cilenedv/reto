@@ -17,22 +17,17 @@ export class FormComponent implements OnInit {
   ngOnInit(): void {
     this.formulario.get("tipodocumento")?.valueChanges.subscribe( valor => {
         let objetivoControl = this.formulario.get("numerodocumento");
-    //   console.log(objetivoControl?.value);
-    //   console.log(valor)
-    //   console.log('click sde seleccion')
       objetivoControl?.clearValidators();
 
 
       switch (valor) {
         case "1":
-        //   objetivoControl?.setValidators([Validators.pattern("[0-9]{8}$")]);
           this.formulario.controls['numerodocumento'].setValidators([
             Validators.required,
             Validators.pattern("[0-9]{8}$")
           ]);
           break;
         case "2":
-        //   objetivoControl?.setValidators([Validators.pattern("[0-9]{12}$")]);
           this.formulario.controls['numerodocumento'].setValidators([
             Validators.required,
             Validators.pattern("[0-9]{12}$")
@@ -69,8 +64,6 @@ export class FormComponent implements OnInit {
     });
 
   }
-  start(){
 
-}
 
 }
